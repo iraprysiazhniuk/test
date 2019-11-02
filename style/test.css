@@ -1,0 +1,47 @@
+html {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  body {
+    width: 100%;
+    font-size: 14px;
+    margin: auto;
+  }
+  .todoList{
+      padding: 1%;
+  }
+#todo{
+    display: flex;
+}
+#search{
+    padding: 5px 2px 5px 25px;
+    background: url('http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s25/search.png') no-repeat scroll 0 50%;
+}
+#infoDialog {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #00000057;
+  }
+  .contentDialog {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 20rem;
+    margin: 16% 40%;
+    padding: 1%;
+    background: #fff;
+  }
+  .tasks{
+      display: none;
+      /*display: flex;*/
+  }
+  .task{
+      padding-right: 2%;
+  }
