@@ -2,75 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
   <title>To-Do List</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style/test.css" />  	
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="style/test-adaptive.css">-->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-  <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 </head>
 <body>
-    <div class="todoList">
     <header>
-        <h1>TODOList</h1>
-    </header>
+        <div class="title">
+                <h1>TODOList</h1>
+        </div>
+    <div class="todoList">
     <div id="todo">
             <input type="search" id="search" placeholder="search by title">
-            <select name="action" id="action">
+            <select class="status" name="status" id="status">
                     <option>all</option>
                     <option value="open">open</option>
                     <option value="done">done</option>
             </select>
-            <select name="level" id="level">
+            <select class="priority" name="priority" id="priority">
                     <option>all</option>
                     <option value="high">high</option>
                     <option value="normal">normal</option>
                     <option value="low">low</option>
             </select>
-            <div class="create">
-                    <button onClick='opendialog()'>Create</button>
-            </div>
+            <button create-task-btn>
+                        Create
+                </button>
     </div>
+    </header>
+    <main>
+        <div id="tasks">
+                
+        </div>
+    </main>
     <footer>
         <h2>Ivan Ivanov</h2>
     </footer>
+    <div class="window-create-task">
+
+    </div>
+    <script src="js/CreateDialog.js"></script>
+    <script src="js/test.js"></script>
 
     <div id="infoDialog" title="Information Dialog">
             <div class="contentDialog">
                 <div class="mainDialog">
                     <div id="form_result"></div>
                     <form id="dialogForm">
-                            <div class="titleDialog">
-                                    <p>Title:</p>
-                                    <input type="text" name="title" id="title" placeholder="Title" value="" onkeyup='checkParams()'>
-                            </div>
-                            <div class="description">
-                                    <p>Description:</p>
-                                    <input type="text" name="description" id="description" placeholder="Description" value="" onkeyup='checkParams()'>
-                            </div>
-                            <div class="priority">
-                                    <p>Priority:</p> 
-                                    <select name="priority" id="priority" value="">
-                                        <option value="high">High</option>
-                                        <option value="normal">Normal</option>
-                                        <option value="low">Low</option>
-                                    </select>
-                            </div>
-                            <div class="dialogButtons">
-                                    <input type="reset" class="dialogCancel" onclick='closedialog()' value="Cancel">
-                                    <input type="submit" class="dialogSave" id="dialogSave" onclick='opentasks(); closeDialogAfterTask()' data-method="serializeArray" disabled value="Save">
-                            </div>
+                                <div class="titleDialog">
+                                        <p>Title:</p>
+                                        <input type="text" name="title" placeholder="Title" value="" required/>
+                                </div>
+                                <div class="description">
+                                        <p>Description:</p>
+                                        <input type="text" name="description" placeholder="Description" value="" required/>
+                                </div>
+                                <div class="priority">
+                                        <p>Priority:</p>
+                                        <select name="priority" value="">
+                                                <option value="high">High</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="low">Low</option>
+                                        </select>
+                                </div>
+                                <div class="dialogButtons">
+                                        <input type="button" cancel-btn value="Cancel">
+                                        <input type="button" save-btn value="Save">
+                                </div>
                         </form>
                 </div>
             </div>
         </div>
-        <div class="tasks" id="tasks">
         </div>
     </div>
-    <script src="js/test.js"></script>
+    
 
 </body>
 </html>
