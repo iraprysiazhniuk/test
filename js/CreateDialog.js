@@ -88,7 +88,7 @@ class CreateDialog {
         });
         let tasks = document.getElementById("tasks");
         let div = document.createElement("div");
-        div.style = "border:2px solid black;width: 15%;padding: 1%;margin-right: 2%;";
+        div.style = "border:2px solid black;width: 15%;padding: 1%;margin-right: 2rem;";
 
         div.setAttribute("task", guid);
         let currentTask = tasks.appendChild(div);
