@@ -56,19 +56,58 @@ html {
     bottom: 0;
     margin: auto;
     background-color: #00000057;
+    justify-content: center;
+    align-items: center;
   }
   .contentDialog {
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 20rem;
-    margin: 16% 40%;
+    height: 22rem;
     padding: 1%;
     background: #fff;
   }
-  .tasks{
-      display: none;      
-      /*display: flex;*/
+  #dialogForm{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titleDialog input{
+    width: 90%;
+    height: 1rem;
+    border: 1px solid #000000;
+    padding: 2%;
+  }
+  .description input{
+    width: 90%;
+    height: 4rem;
+    border: 1px solid #000000;
+    padding: 2%;
+  }
+  .priority select{
+    width: 95%;
+    height: 2rem;
+    border: 1px solid #000000;
+    padding: 2%;
+  }
+  .dialogButtons{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding-top: 7%;
+  }
+  .dialogButtons input{
+    height: 2rem;
+    width: 40%;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+  #tasks{
+    display: flex;
+    padding-left: 6%;
+    padding-top: 2%;
+    justify-content: center;
   }
   footer{
     padding-left: 1%;
