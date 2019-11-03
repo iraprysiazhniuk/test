@@ -42,7 +42,7 @@ class CreateDialog {
     }
 
     generateGuid() {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        return 'zxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
             var r = Math.random() * 16 | 0,
                 v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
@@ -91,10 +91,12 @@ class CreateDialog {
         div.style = "border:2px solid black;width: 15%;padding: 1%;margin-right: 2rem;";
 
         div.setAttribute("task", guid);
+        div.className = "task";
         let currentTask = tasks.appendChild(div);
         currentTask.appendChild(taskTitle);
         currentTask.appendChild(descriptionTask);
         currentTask.appendChild(priority);
         currentTask.appendChild(selectAction);
     }
+    
 }
